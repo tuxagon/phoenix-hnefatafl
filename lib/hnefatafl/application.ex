@@ -11,9 +11,9 @@ defmodule Hnefatafl.Application do
       # Start the Ecto repository
       supervisor(Hnefatafl.Repo, []),
       # Start the endpoint when the application starts
-      supervisor(HnefataflWeb.Endpoint, [])
-      # Start your own worker by calling: Hnefatafl.Worker.start_link(arg1, arg2, arg3)
-      # worker(Hnefatafl.Worker, [arg1, arg2, arg3]),
+      supervisor(HnefataflWeb.Endpoint, []),
+      supervisor(Hnefatafl.GameSupervisor, []),
+      {Registry, keys: :unique, name: Hnefatafl.Registry}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
