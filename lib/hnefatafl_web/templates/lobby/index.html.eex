@@ -1,0 +1,5 @@
+<%= if player_authorized?(@conn) do %>
+  <p><%= player_token(@conn) %></p>
+
+  <p><%= player_id(@conn) %></p>
+<% end %>

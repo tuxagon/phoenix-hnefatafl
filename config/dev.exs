@@ -1,5 +1,8 @@
 use Mix.Config
 
+config :hnefatafl,
+  player_token_salt: "replace me"
+
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

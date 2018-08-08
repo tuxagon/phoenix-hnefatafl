@@ -23,6 +23,11 @@ defmodule HnefataflWeb.ConnCase do
 
       # The default endpoint for testing
       @endpoint HnefataflWeb.Endpoint
+
+      defp with_current_player(conn, player) do
+        conn
+        |> assign(:current_player, player)
+      end
     end
   end
 

@@ -17,7 +17,9 @@ defmodule HnefataflWeb.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
-    get("/", PageController, :index)
+    get("/", LobbyController, :index)
+    get("/session", SessionController, :new)
+    post("/session", SessionController, :create)
   end
 
   # Other scopes may use custom stacks.
